@@ -17,17 +17,18 @@
         <h1>Gan Ha-Darom</h1>
     </div>
     <div class="page">
-        <div class="column menu">
-            <ul>
-                <li>The Site</li>
-                <li>Historical background</li>
-                <li>Previous excavations</li>
-                <li>The excavation report</li>
-                <li>Photographs and drawings</li>
+        <div class="menu">
+            <button class="btn-menu" onclick="toggleMenu()">☰</button>
+            <ul class="main-nav">
+                <li><a href="#" class=".nev-txt"></a>The Site</a></li>
+                <li><a href="#" class=".nev-txt"></a>Historical background</a></li>
+                <li><a href="#" class=".nev-txt"></a>Previous excavations</a></li>
+                <li><a href="#" class=".nev-txt"></a>The excavation report</a></li>
+                <li><a href="#" class=".nev-txt"></a>Photographs and drawings</a></li>
             </ul>
         </div>
         <div class="the-site">
-                <h1>The Site</h1>
+            <h1>The Site</h1>
             <p class="site-info">The site is located on a low hill where remains of an extensive settlement in which
                 kurkar (sandstone)
                 building stones were found, along with the remains of installations and sherds dating from the Roman to
@@ -37,22 +38,28 @@
                 protruding on the surface, perhaps the remains of a structure, as well as numerous sherds, dated mostly
                 to the Byzantine period. These included fragments of a tabun, jars, kraters, a casserole and a few
                 sherds, dating from the late Roman-early Byzantine periods.</p>
-            </div>
-                <div class="map-main">
-                    <div class="map" id="map"></div>
-                    <img class="location" src="img/user-location.png" onclick="getPosition()">
-                    <div>
-                        <!-- <ul class="fav-spots"></ul> -->
-                    </div>
-                </div>
         </div>
+        <div class="map-main">
+            <div class="map" id="map"></div>
+            <img class="location" src="img/user-location.png" onclick="getPosition()">
+            <div>
+                <!-- <ul class="fav-spots"></ul> -->
+            </div>
+        </div>
+    </div>
     </div>
     <div class="footer">
         <p>© Ayelet Dayan</p>
     </div>
 </body>
-
-<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAymBxSnJT698GLjsVVKK9W1pDklNtiXc&callback=initMap"></script>
+<script>
+    function toggleMenu() {
+        console.log('hi')
+        document.body.classList.toggle('menu-open');
+    }
+</script>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAymBxSnJT698GLjsVVKK9W1pDklNtiXc&callback=initMap"></script>
 <script src="js/storageService.js"></script>
 <script src="js/utilService.js"></script>
 <script src="js/placeService.js"></script>
